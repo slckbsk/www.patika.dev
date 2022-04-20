@@ -1,0 +1,107 @@
+query getAllEventsNested {
+  events {
+    id
+    title
+    date
+    user {
+      id
+      username
+      email
+    }
+    participants {
+      id
+      event_id
+      users {
+        username
+      }
+    }
+    locations {
+      id
+      name
+      desc
+      lat
+      lng
+    }
+  }
+}
+
+query getAllUsers {
+  users {
+    id
+    email
+    username
+    events{title}
+    
+  }
+}
+
+query getUser {
+  user(id: 6) {
+    id
+    email
+    username
+    events{title}
+  }
+}
+
+query getAllEvents {
+  events {
+    id
+    title
+    desc
+    date
+    from
+    to
+    location_id
+    user_id
+  }
+}
+
+query getEvent {
+  event(id: 6) {
+    id
+    title
+    desc
+    date
+    from
+    to
+    location_id
+    user_id
+  }
+}
+
+query getAllLocations {
+  locations {
+    id
+    name
+    desc
+    lat
+    lng
+  }
+}
+
+query getLocation {
+  location(id: 9) {
+    id
+    name
+    desc
+    lat
+    lng
+  }
+}
+
+query getAllParticipants {
+  participants {
+    id
+    user_id
+    event_id
+  }
+}
+
+query getParticipants {
+  participant(id: 4) {
+    id
+    user_id
+    event_id
+  }
+}
