@@ -1,0 +1,168 @@
+mutation addNewUser {
+  createUser(data: { username: "Cüneyt Arkın", email: "cuneyt@mail.com" }) {
+    id
+    username
+    email
+  }
+}
+
+mutation updateUser {
+  updateUser(
+    id: 1
+    data: { username: "Selcuk basak 'Cilek'", email: "selcuk5@mail.com" }
+  ) {
+    id
+    username
+    email
+  }
+}
+
+mutation deleteUser {
+  deleteUser(id: 8) {
+    id
+    username
+  }
+}
+
+mutation deleteAllUser {
+  deleteAllUsers {
+    count
+  }
+}
+
+mutation addNewEvent {
+  createEvent(
+    data: {
+      title: "Turkish Man in Newyork"
+      desc: "I don't drink coffee, I take tea my dear, I like my toast done on one side And you can hear it in my accent when I talk I'm an Turkish man in New York"
+      date: "2019-09-12"
+      from: "11:00"
+      to: "12:00"
+      location_id: 5
+      user_id: 1
+    }
+  ) {
+    title
+    desc
+    date
+    from
+    to
+    location_id
+    user_id
+  }
+}
+
+mutation updateEvent {
+  updateEvent(
+    id: 7
+    data: {
+      title: "Turkish Man in Newyork"
+      desc: "If 'manners maketh man' as someone saidHe's the hero of the day It takes a man to suffer ignorance and smile Be yourself no matter what they say"
+    }
+  ) {
+    title
+    desc
+    date
+    from
+    to
+    location_id
+    user_id
+  }
+}
+
+mutation deleteEvent {
+  deleteEvent(id: 6) {
+    title
+    desc
+    date
+    from
+    to
+    location_id
+    user_id
+  }
+}
+
+mutation deleteAllEvent {
+  deleteAllEvents {
+    count
+  }
+}
+
+mutation addNewLocation {
+  createLocation(
+    data: {
+      name: "northern Africa"
+      desc: "quick brown fox jumps over the lazy dog"
+      lat: -13.0825
+      lng: 27.5057
+    }
+  ) {
+    id
+    name
+    desc
+    lat
+    lng
+  }
+}
+
+mutation updateLocation {
+  updateLocation(
+    id: 481
+    data: {
+      name: "Wunschfurt"
+      desc: "This is not to discredit the idea that the wonderful puppy reveals itself as a powerful prune to those who look?"
+    }
+  ) {
+    id
+    name
+    desc
+    lat
+    lng
+  }
+}
+
+mutation deleteLocation {
+  deleteLocation(id: 2) {
+    id
+    name
+    desc
+    lat
+    lng
+  }
+}
+
+mutation deleteAllLocation {
+  deleteAllLocations {
+    count
+  }
+}
+
+mutation addNewParicipant {
+  createParticipant(data: { user_id: 1  event_id: 2 }) {
+    user_id
+    event_id
+  }
+}
+
+mutation updateParticipant {
+  updateParticipant(
+    id: 4
+    data: { user_id: 5  }
+  ) {
+    user_id
+    event_id
+  }
+}
+
+mutation deleteParticipant {
+  deleteParticipant(id: 4) {
+    user_id
+    event_id
+  }
+}
+
+mutation deleteAllParticipant {
+  deleteAllParticipants {
+    count
+  }
+}
