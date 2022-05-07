@@ -1,3 +1,0 @@
-type DeleteAllOutPut {
-  count: Int!
-}

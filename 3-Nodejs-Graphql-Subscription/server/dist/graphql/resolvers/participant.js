@@ -1,1 +1,0 @@
-"use strict";Object.defineProperty(exports,"__esModule",{value:true});exports.Participant=void 0;var Participant={users:function users(_,__,_ref){var db=_ref.db;return db.users.filter(function(user){return user.id===parent.user_id})}};exports.Participant=Participant;
